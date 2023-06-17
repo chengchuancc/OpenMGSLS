@@ -4,6 +4,7 @@
 #include "DueTimer.h" // 引入DueTimer库，用于设置定时器
 #include "Planner.h" // 引入Planner头文件，包含了路径规划和插补函数
 #include <SPI.h> // 引入SPI库，用于串行外设接口通信
+#include <TimerInterrupt_Generic.h>//引入mega2560可以用的定时器
 extern bool IsMoving_XY; // 声明一个外部变量，用于判断XY轴是否在运动中
 extern bool NeedOpenLaser_bool_XYMG; // 声明一个外部变量，用于判断是否需要打开激光器
 extern int Times_LinearLnterpolation_int_XYMG; // 声明一个外部变量，用于记录线性插补的次数
