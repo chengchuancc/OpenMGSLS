@@ -37,6 +37,10 @@
 "..\obj\timer.o"
 "..\obj\dac8563.o"
 --strict --scatter "..\OBJ\VirtualCOMPort.sct"
+<<<<<<< HEAD
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+=======
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+>>>>>>> d4f9d986d88fb81c5d9cfad31b253a56f95bafcf
 --info sizes --info totals --info unused --info veneers
 --list "..\LIS\VirtualCOMPort.map" -o ..\OBJ\VirtualCOMPort.axf

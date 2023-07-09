@@ -80,7 +80,11 @@ void DAC8563_WRITE(uint8_t cmd,uint16_t data)
   SCLK_L;
   for( s=0;s<8;s++)
   {
+<<<<<<< HEAD
     if((cmd&0x80)==0x80){DIN_H;}//判断一个数的最高位是否为1。
+=======
+    if((cmd&0x80)==0x80){DIN_H;}
+>>>>>>> d4f9d986d88fb81c5d9cfad31b253a56f95bafcf
     else{DIN_L;}
     delay_us(4);
     SCLK_H;
