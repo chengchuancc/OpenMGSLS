@@ -64,7 +64,7 @@ void XYMG_Move()
 		Times_Now++; // 当前次数加一
 	}
 	else { // 否则
-		//Timer5.stop(); // 停止定时器5
+		Timer5.stop(); // 停止定时器5
 		analogWrite(PIN_LASER, LASER_OFF_POWER); // 关闭激光器
 		IsMoving_XY = false; // 设置移动状态为false
 	}
@@ -75,7 +75,7 @@ void XYMG_StartMove()
 {
 	Times_Now = 0; // 设置当前次数为零
 	IsMoving_XY = true; // 设置移动状态为true
-	//Timer5.setFrequency(CYCLE_LNTERPOLARION).start(); // 设置定时器5的频率并启动
+	Timer5.setFrequency(CYCLE_LNTERPOLARION).start(); // 设置定时器5的频率并启动
 	if (NeedOpenLaser_bool_XYMG) { // 如果需要打开激光器
 		analogWrite(PIN_LASER, LASER_ON_POWER); // 打开激光器
 	}

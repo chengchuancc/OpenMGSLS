@@ -5,6 +5,7 @@
 #include <Arduino.h> // 引入Arduino核心库，包含了基本的输入输出函数
 #include "config.h" // 引入配置文件，包含了一些常量和变量的定义
 #include "Command.h" // 引入Command头文件，包含了命令解析和处理函数
+#include "DueTimer.h" // 引入DueTimer库，用于设置定时器
 
 extern int DAValBufferPlanCouter_int_Planner; // 声明一个外部变量，用于记录DA值缓冲区的规划计数器，表示已经规划了多少个DA值
 extern int DAValBufferMoveCouter_int_Planner; // 声明一个外部变量，用于记录DA值缓冲区的移动计数器，表示已经执行了多少个DA值

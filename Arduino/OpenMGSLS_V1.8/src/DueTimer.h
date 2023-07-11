@@ -83,18 +83,18 @@ protected:
 
 public:
 
-	static DueTimer getAvailable(void);
+	static DueTimer getAvailable(void); // 定义一个静态函数，用来获取第一个可用的定时器对象
 
-	DueTimer(unsigned short _timer);
-	DueTimer& attachInterrupt(void (*isr)());
-	DueTimer& detachInterrupt(void);
-	DueTimer& start(long microseconds = -1);
-	DueTimer& stop(void);
-	DueTimer& setFrequency(double frequency);
-	DueTimer& setPeriod(unsigned long microseconds);
+	DueTimer(unsigned short _timer); // 定义一个构造函数，用来创建一个指定编号的定时器对象
+	DueTimer& attachInterrupt(void (*isr)()); // 定义一个成员函数，用来为定时器对象绑定一个中断服务函数
+	DueTimer& detachInterrupt(void); // 定义一个成员函数，用来为定时器对象解绑中断服务函数
+	DueTimer& start(long microseconds = -1); // 定义一个成员函数，用来启动定时器对象，并可选地设置定时器周期
+	DueTimer& stop(void); // 定义一个成员函数，用来停止定时器对象
+	DueTimer& setFrequency(double frequency); // 定义一个成员函数，用来设置定时器对象的频率
+	DueTimer& setPeriod(unsigned long microseconds); // 定义一个成员函数，用来设置定时器对象的周期
 
-	double getFrequency(void) const;
-	long getPeriod(void) const;
+	double getFrequency(void) const; // 定义一个常量成员函数，用来获取定时器对象的频率
+	long getPeriod(void) const; // 定义一个常量成员函数，用来获取定时器对象的周期
 };
 
 // 这里是定义DueTimer类的主体部分，包括以下内容：
